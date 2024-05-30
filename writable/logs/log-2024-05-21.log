@@ -1,0 +1,327 @@
+INFO - 2024-05-21 07:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-21 07:51:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/login', [], true)
+ 3 APPPATH\Controllers\User.php(16): view('user/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+INFO - 2024-05-21 07:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 07:51:49 --> mysqli_sql_exception: Unknown column 'email' in 'where clause' in E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 E:\xampp\htdocs\rmh\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\rmh\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\rmh\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('test@gmail.com', 'email', Array, NULL, 'email')
+#6 E:\xampp\htdocs\rmh\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'test@gmail.com', Array, Array, 'email')
+#7 E:\xampp\htdocs\rmh\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 E:\xampp\htdocs\rmh\app\Controllers\User.php(33): CodeIgniter\Controller->validate(Array, Array)
+#9 E:\xampp\htdocs\rmh\system\CodeIgniter.php(933): App\Controllers\User->processRegister()
+#10 E:\xampp\htdocs\rmh\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 E:\xampp\htdocs\rmh\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\rmh\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\rmh\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 E:\xampp\htdocs\rmh\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 E:\xampp\htdocs\rmh\system\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-05-21 07:51:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+[Method: POST, Route: user/processRegister]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('test@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'test@gmail.com', [...], [...], 'email')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\User.php(33): CodeIgniter\Controller->validate([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 07:51:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `email` = \'test@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `email` = \'test@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('test@gmail.com', 'email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'test@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\User.php(33): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 07:51:49 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1
+FROM `users`
+WHERE `email` = \'test@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `email` = \'test@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `email` = \'test@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('test@gmail.com', 'email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'test@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\User.php(33): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+INFO - 2024-05-21 07:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-21 07:54:37 --> ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+[Method: POST, Route: user/processRegister]
+in SYSTEMPATH\Validation\Validation.php on line 969.
+ 1 SYSTEMPATH\Validation\Validation.php(969): strpos('required|min_length[8]|regex_match[/^(?=.*[a-z])(?=.*[A-Z])', '|', 60)
+ 2 SYSTEMPATH\Validation\Validation.php(608): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(181): CodeIgniter\Validation\Validation->setRules([...], [...])
+ 4 SYSTEMPATH\Controller.php(135): CodeIgniter\Controller->setValidator([...], [...])
+ 5 APPPATH\Controllers\User.php(33): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->processRegister()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+INFO - 2024-05-21 07:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 07:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 08:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 08:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 09:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 11:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 11:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 11:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 11:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 11:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 11:13:10 --> mysqli_sql_exception: Unknown column 'reset_token' in 'field list' in E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `users` ...', 0)
+#1 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 E:\xampp\htdocs\rmh\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 E:\xampp\htdocs\rmh\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\xampp\htdocs\rmh\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 E:\xampp\htdocs\rmh\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 E:\xampp\htdocs\rmh\app\Models\UserModel.php(44): CodeIgniter\Model->update('1', Array)
+#8 E:\xampp\htdocs\rmh\app\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+#9 E:\xampp\htdocs\rmh\system\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+#10 E:\xampp\htdocs\rmh\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 E:\xampp\htdocs\rmh\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\rmh\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\rmh\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 E:\xampp\htdocs\rmh\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 E:\xampp\htdocs\rmh\system\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-05-21 11:13:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'reset_token' in 'field list'
+[Method: POST, Route: user/sendResetLink]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 11:13:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'reset_token' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `reset_token` = \'ebe9dde91aeb598e36bd2af538be78585def646688fca92e399465d0f894a52d\', `reset_token_expired_at` = \'2024-05-22 11:13:10\'
+WHERE `users`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `reset_token` = \'ebe9dde91aeb598e36bd2af538be78585def646688fca92e399465d0f894a52d\', `reset_token_expired_at` = \'2024-05-22 11:13:10\'
+WHERE `users`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 8 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 11:13:10 --> [Caused by] mysqli_sql_exception: Unknown column 'reset_token' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `users` SET `reset_token` = \'ebe9dde91aeb598e36bd2af538be78585def646688fca92e399465d0f894a52d\', `reset_token_expired_at` = \'2024-05-22 11:13:10\'
+WHERE `users`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `reset_token` = \'ebe9dde91aeb598e36bd2af538be78585def646688fca92e399465d0f894a52d\', `reset_token_expired_at` = \'2024-05-22 11:13:10\'
+WHERE `users`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `reset_token` = \'ebe9dde91aeb598e36bd2af538be78585def646688fca92e399465d0f894a52d\', `reset_token_expired_at` = \'2024-05-22 11:13:10\'
+WHERE `users`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 9 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+INFO - 2024-05-21 11:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-21 12:59:52 --> mysqli_sql_exception: Unknown column 'reset_token' in 'field list' in E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 E:\xampp\htdocs\rmh\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `users` ...', 0)
+#1 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 E:\xampp\htdocs\rmh\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 E:\xampp\htdocs\rmh\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 E:\xampp\htdocs\rmh\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\xampp\htdocs\rmh\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 E:\xampp\htdocs\rmh\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 E:\xampp\htdocs\rmh\app\Models\UserModel.php(44): CodeIgniter\Model->update('1', Array)
+#8 E:\xampp\htdocs\rmh\app\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+#9 E:\xampp\htdocs\rmh\system\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+#10 E:\xampp\htdocs\rmh\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 E:\xampp\htdocs\rmh\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\rmh\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\rmh\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 E:\xampp\htdocs\rmh\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 E:\xampp\htdocs\rmh\system\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-05-21 12:59:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'reset_token' in 'field list'
+[Method: POST, Route: user/sendResetLink]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 12:59:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'reset_token' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `reset_token` = \'943cb7bba476850cb90bf8846828047284cd9393b7753500e420aeeba1fc9904\', `reset_token_expired_at` = \'2024-05-22 12:59:52\'
+WHERE `users`.`id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `reset_token` = \'943cb7bba476850cb90bf8846828047284cd9393b7753500e420aeeba1fc9904\', `reset_token_expired_at` = \'2024-05-22 12:59:52\'
+WHERE `users`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 8 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+CRITICAL - 2024-05-21 12:59:52 --> [Caused by] mysqli_sql_exception: Unknown column 'reset_token' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `users` SET `reset_token` = \'943cb7bba476850cb90bf8846828047284cd9393b7753500e420aeeba1fc9904\', `reset_token_expired_at` = \'2024-05-22 12:59:52\'
+WHERE `users`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `reset_token` = \'943cb7bba476850cb90bf8846828047284cd9393b7753500e420aeeba1fc9904\', `reset_token_expired_at` = \'2024-05-22 12:59:52\'
+WHERE `users`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `reset_token` = \'943cb7bba476850cb90bf8846828047284cd9393b7753500e420aeeba1fc9904\', `reset_token_expired_at` = \'2024-05-22 12:59:52\'
+WHERE `users`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `reset_token` = :reset_token:, `reset_token_expired_at` = :reset_token_expired_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\UserModel.php(44): CodeIgniter\Model->update('1', [...])
+ 9 APPPATH\Controllers\User.php(110): App\Models\UserModel->generateResetToken('test@gmail.com')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->sendResetLink()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('E:\\xampp\\htdocs\\rmh\\public\\index.php')
+INFO - 2024-05-21 12:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-21 13:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
